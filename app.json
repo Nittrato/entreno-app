@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "entreno",
+    "slug": "entreno",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "scheme": "entreno",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a110dff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a110dff",
+        "versionCode": 2
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.nitrato.entreno"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5dc1f742-0615-4182-bc1d-b2093fcf9bc6"
+      }
+    }
+  }
+}
