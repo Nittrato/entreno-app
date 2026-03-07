@@ -1,4 +1,5 @@
-import { View, Text, Animated } from 'react-native';
+import { View, Animated } from 'react-native';
+import Texto from '../components/Texto';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { ROUTINE } from '../lib/data';
 import { CircularProgress } from '../components/ProgressBar';
@@ -88,7 +89,7 @@ export default function RestScreen() {
 						style={{ transform: [{ rotate: '45deg' }] }}
 					/>
 				</TouchableOpacity>
-				<Text className="text-segundario absolute left-0 right-0 text-center text-h3">Descanso</Text>
+				<Texto className="text-segundario absolute left-0 right-0 text-center text-h3">Descanso</Texto>
 			</View>
 
 			<View className="items-center px-6 py-12 gap-12">
@@ -99,15 +100,15 @@ export default function RestScreen() {
 							size={320}
 							strokeWidth={20}
 						>
-							<Text className="text-segundario text-[6rem]">
+							<Texto className="text-segundario text-[6rem]">
 								{formatTime(timeLeft)}
-							</Text>
+							</Texto>
 						</CircularProgress>
 					</Animated.View>
 				</FadeSlideView>
 
 				{/* Controls */}
-				<View className="flex-row items-center justify-around w-full mt-14 px-2">
+				<View className="flex-row items-center justify-around w-full mt-14 px-6">
 					<ScaleButton
 						onPress={() => setTimeLeft(parseInt(duration) || 60)}
 						className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border"
@@ -138,9 +139,9 @@ export default function RestScreen() {
 			{/* Next Exercise Preview */}
 			{nextExercise && (
 				<FadeSlideView className="mt-16 w-full px-6" distance={30}>
-					<Text className="text-segundario text-h3 mb-4 ">
+					<Texto className="text-segundario text-h3 mb-4 ">
 						Siguiente ejercicio
-					</Text>
+					</Texto>
 					<ExerciseCard exercise={nextExercise} date={date} />
 				</FadeSlideView>
 			)}

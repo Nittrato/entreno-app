@@ -1,4 +1,5 @@
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import Texto from '../../components/Texto';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { ROUTINE } from '../../lib/data';
 import {
@@ -100,16 +101,16 @@ export default function ExerciseDetail() {
 				{/* Title & Description Overlay */}
 				<View className="absolute bottom-0 left-6 right-6">
 					<View className="bg-color/10 self-start px-2 py-1 rounded-xl mb-3">
-						<Text className="text-color text-base">
+						<Texto className="text-color text-base">
 							{exercise.location}
-						</Text>
+						</Texto>
 					</View>
-					<Text className="text-primario text-h1 font-semibold mb-4">
+					<Texto className="text-primario text-h1 font-bold mb-4">
 						{exercise.name}
-					</Text>
-					<Text className="text-segundario text-h4 leading-7">
+					</Texto>
+					<Texto className="text-segundario text-h4 leading-7">
 						{exercise.description}
-					</Text>
+					</Texto>
 				</View>
 			</View>
 
@@ -119,9 +120,9 @@ export default function ExerciseDetail() {
 					<View className="flex-row justify-between mb-6 gap-4">
 						<View className="bg-card border border-border rounded-rounded2 h-boton2 flex-1 flex-row items-center justify-center">
 							<Chart size={20} color="#21c063" variant="Bold" />
-							<Text className="text-segundario ml-2 text-h4">
+							<Texto className="text-segundario ml-2 text-h4">
 								{exercise.level}
-							</Text>
+							</Texto>
 						</View>
 						<View className="bg-card border border-border rounded-rounded2 h-boton2 flex-1 flex-row items-center justify-center">
 							<Timer1
@@ -129,15 +130,15 @@ export default function ExerciseDetail() {
 								color="#4e9effff"
 								variant="Bold"
 							/>
-							<Text className="text-segundario ml-2 text-h4">
+							<Texto className="text-segundario ml-2 text-h4">
 								{exercise.rest} sec
-							</Text>
+							</Texto>
 						</View>
 						<View className="bg-card border border-border rounded-rounded2 h-boton2 flex-1 flex-row items-center justify-center">
 							<Weight size={20} color="#F4C714" variant="Bold" />
-							<Text className="text-segundario ml-2 text-h4">
+							<Texto className="text-segundario ml-2 text-h4">
 								{exercise.series}x{exercise.reps}
-							</Text>
+							</Texto>
 						</View>
 					</View>
 				</FadeSlideView>
@@ -154,11 +155,11 @@ export default function ExerciseDetail() {
 						className="absolute left-0 top-0 bottom-0 bg-color"
 					/>
 					<View className="flex-row items-center justify-center z-10 w-full ">
-						<Text
-							className={`${seriesDone / exercise.series > 0.5 ? 'text-fondo font-bold' : 'text-segundario'} text-h3 mr-2`}
+						<Texto
+							className={`${seriesDone / exercise.series > 0.5 ? 'text-fondo font-bold' : 'text-segundario font-bold'} text-h3 mr-2`}
 						>
 							{`Completar Serie ${Math.min(seriesDone + 1, exercise.series)}/${exercise.series}`}
-						</Text>
+						</Texto>
 						<TickCircle
 							size={24}
 							color={
@@ -173,16 +174,16 @@ export default function ExerciseDetail() {
 
 				{/* Next Exercises */}
 				<View>
-					<Text className="text-segundario text-h3 mb-6">
+					<Texto className="text-segundario text-h3 mb-6">
 						Siguientes ejercicios
-					</Text>
+					</Texto>
 					{nextExercises.map(ex => (
 						<ExerciseCard key={ex.id} exercise={ex} date={date} />
 					))}
 					{nextExercises.length === 0 && (
-						<Text className="text-segundario">
+						<Texto className="text-segundario">
 							Último ejercicio del día
-						</Text>
+						</Texto>
 					)}
 				</View>
 			</View>

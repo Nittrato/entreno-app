@@ -33,7 +33,7 @@ module.exports = {
 				boton: '4.2rem',
 			},
 			fontFamily: {
-				urbanist: ['Urbanist'],
+				sans: ['GoogleSans'],
 			},
 			fontSize: {
 				// es un titulo grande

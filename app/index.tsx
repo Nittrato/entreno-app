@@ -1,5 +1,4 @@
 import {
-	Text,
 	View,
 	ScrollView,
 	TouchableOpacity,
@@ -11,6 +10,7 @@ import { ArrowLeft2, ArrowRight2 } from 'iconsax-react-nativejs';
 import { useState, useMemo, useEffect } from 'react';
 import { useStore } from '../lib/store';
 import { FadeSlideView, ScaleButton } from '../components/AnimatedElements';
+import Texto from '../components/Texto';
 
 export default function Home() {
 	const dayNames = [
@@ -109,37 +109,37 @@ export default function Home() {
 			<FadeSlideView distance={20}>
 				{/* Header */}
 				<View className="pt-16 px-6 mb-8">
-					<Text className="text-segundario text-h2">
+					<Texto className="text-segundario text-h2">
 						Resumen de actividad
-					</Text>
+					</Texto>
 				</View>
 
 				{/* Progress Card */}
 				<View className="mx-6 p-6 bg-card rounded-rounded2 border border-border flex-row items-center justify-between mb-10">
 					<View>
-						<Text className="text-primario text-h3 mb-1">
+						<Texto className="text-primario text-h3 mb-1">
 							Progreso Mensual
-						</Text>
-						<Text className="text-segundario text-h4 ">
+						</Texto>
+						<Texto className="text-segundario text-h4 ">
 							{displayDate.month} {displayDate.year}
-						</Text>
+						</Texto>
 					</View>
 					<CircularProgress
 						progress={monthlyProgress}
 						size={80}
 						strokeWidth={8}
 					>
-						<Text className="text-primario text-h3">
+						<Texto className="text-primario text-h3">
 							{Math.round(monthlyProgress * 100)}%
-						</Text>
+						</Texto>
 					</CircularProgress>
 				</View>
 
 				{/* Calendar Header */}
 				<View className="mx-6 flex-row justify-between items-center mb-6">
-					<Text className="text-segundario text-h3">
+					<Texto className="text-segundario text-h3">
 						{displayDate.month} {displayDate.year}
-					</Text>
+					</Texto>
 					<View className="flex-row gap-4">
 						<ScaleButton
 						onPress={() => setWeekOffset(prev => prev - 7)}
@@ -183,16 +183,16 @@ export default function Home() {
 										: 'bg-card border-border'
 								}`}
 							>
-								<Text
+								<Texto
 									className={`text-base  mb-1 ${isSelected ? 'text-fondo' : 'text-segundario'}`}
 								>
 									{dayShort[index]}
-								</Text>
-								<Text
+								</Texto>
+								<Texto
 									className={`text-base font-bold ${isSelected ? 'text-fondo' : 'text-segundario'}`}
 								>
 									{number}
-								</Text>
+								</Texto>
 								{isCompletedOverall && !isSelected && (
 									<View className="absolute -bottom-1 w-1 h-1 bg-color rounded-full" />
 								)}
@@ -203,10 +203,10 @@ export default function Home() {
 
 				{/* Exercises List */}
 				<View className="mx-6" key={selectedDay}>
-					<Text className="text-segundario text-h3 mb-6">
+					<Texto className="text-segundario text-h3 mb-6">
 						{selectedDay}
 						{currentDayRoutine?.title && ` - ${currentDayRoutine.title}`}
-					</Text>
+					</Texto>
 
 					{(currentDayRoutine?.exercises?.length ?? 0) > 0 ? (
 						currentDayRoutine?.exercises?.map(ex => (
@@ -218,9 +218,9 @@ export default function Home() {
 						))
 					) : (
 						<View className="items-center py-10">
-							<Text className="text-segundario text-h3">
+							<Texto className="text-segundario text-h3">
 								Hoy es día de descanso
-							</Text>
+							</Texto>
 						</View>
 					)}
 				</View>

@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
 	const [loaded, error] = useFonts({
-		Urbanist: require('../assets/fonts/Urbanist-VariableFont_wght.ttf'),
+		GoogleSans: require('../assets/fonts/GoogleSansFlex.ttf'),
 	});
 
 	useEffect(() => {
