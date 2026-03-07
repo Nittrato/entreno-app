@@ -23,14 +23,14 @@ module.exports = {
 			},
 			borderRadius: {
 				rounded: '2rem',
-				rounded2: '2.5rem',
+				rounded2: '2.2rem',
 			},
 			height: {
-				boton: '4.2rem',
-				boton2: '5.2rem',
+				boton: '4rem',
+				boton2: '5rem',
 			},
 			width: {
-				boton: '4.2rem',
+				boton: '4rem',
 			},
 			fontFamily: {
 				sans: ['GoogleSans'],
