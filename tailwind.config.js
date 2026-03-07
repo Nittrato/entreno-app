@@ -22,8 +22,8 @@ module.exports = {
 				trans2: '#ffffff30',
 			},
 			borderRadius: {
-				rounded: '1.8rem',
-				rounded2: '2.2rem',
+				rounded: '2rem',
+				rounded2: '2.5rem',
 			},
 			height: {
 				boton: '4.2rem',
