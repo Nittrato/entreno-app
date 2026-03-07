@@ -74,21 +74,21 @@ export default function RestScreen() {
 	};
 
 	return (
-		<View className="flex-1 bg-fondo px-6 pt-6">
+		<View className="flex-1 bg-fondo">
 			{/* Header Controls */}
-			<View className="flex-row items-center justify-center h-12 mb-12">
+			<View className="flex-row items-center justify-between p-6">
 				<TouchableOpacity
 					onPress={() => router.back()}
 					activeOpacity={0.8}
-					className="w-14 h-14 bg-card rounded-3xl items-center justify-center border border-border absolute left-0 z-10"
+					className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border z-10"
 				>
 					<Add
-						size={20}
+						size={22}
 						color="#FFFFFF"
 						style={{ transform: [{ rotate: '45deg' }] }}
 					/>
 				</TouchableOpacity>
-				<Text className="text-segundario text-h3">Descanso</Text>
+				<Text className="text-segundario absolute left-0 right-0 text-center text-h3">Descanso</Text>
 			</View>
 
 			<View className="items-center px-6 py-12 gap-12">
@@ -110,14 +110,14 @@ export default function RestScreen() {
 				<View className="flex-row items-center justify-around w-full mt-14 px-2">
 					<ScaleButton
 						onPress={() => setTimeLeft(parseInt(duration) || 60)}
-						className="w-boton h-boton bg-card rounded-3xl items-center justify-center border border-border"
+						className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border"
 					>
 						<Refresh2 size={24} color="#7faa96" />
 					</ScaleButton>
 
 					<ScaleButton
 						onPress={() => setIsActive(!isActive)}
-						className="w-36 h-24 bg-color rounded-rounded items-center justify-center shadow-xl shadow-color/60"
+						className="w-36 h-24 bg-color rounded-rounded2 items-center justify-center shadow-xl shadow-color/60"
 					>
 						{isActive ? (
 							<Pause size={40} color="#0f1913" variant="Bold" />
@@ -128,7 +128,7 @@ export default function RestScreen() {
 
 					<ScaleButton
 						onPress={handleSkip}
-						className="w-boton h-boton bg-card rounded-3xl items-center justify-center border border-border"
+						className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border"
 					>
 						<Next size={24} color="#7faa96" variant="Bold" />
 					</ScaleButton>
@@ -137,7 +137,7 @@ export default function RestScreen() {
 
 			{/* Next Exercise Preview */}
 			{nextExercise && (
-				<FadeSlideView className="mt-16 w-full px-2" distance={30}>
+				<FadeSlideView className="mt-16 w-full px-6" distance={30}>
 					<Text className="text-segundario text-h3 mb-4 ">
 						Siguiente ejercicio
 					</Text>

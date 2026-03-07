@@ -18,7 +18,7 @@ export const ExerciseCard = ({ exercise, date }) => {
 					params: { date },
 				})
 			}
-			className="flex-row items-center p-4 mb-6 bg-card rounded-rounded border border-border gap-4"
+			className="flex-row items-center p-4 mb-6 bg-card rounded-rounded2 border border-border gap-4"
 		>
 			<Image
 				source={
@@ -26,7 +26,7 @@ export const ExerciseCard = ({ exercise, date }) => {
 						? { uri: exercise.image }
 						: exercise.image
 				}
-				className="w-16 h-16 rounded-2xl"
+				className="w-16 h-16 rounded-3xl"
 				resizeMode="cover"
 			/>
 

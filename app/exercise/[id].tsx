@@ -90,7 +90,7 @@ export default function ExerciseDetail() {
 
 				{/* Header Controls */}
 				<TouchableOpacity
-					className="absolute backdrop-blur-md web:anim bg-fondo/60 top-6 left-6 w-boton h-boton rounded-rounded items-center justify-center z-10"
+					className="absolute backdrop-blur-md web:anim bg-fondo/60 top-6 left-6 w-boton h-boton rounded-full items-center justify-center z-10"
 					onPress={() => router.back()}
 					activeOpacity={0.8}
 				>
@@ -116,14 +116,14 @@ export default function ExerciseDetail() {
 			<View className="mx-6 mt-10">
 				<FadeSlideView distance={30}>
 					{/* Stats Cards */}
-					<View className="flex-row justify-between mb-8 gap-4">
-						<View className="bg-card border border-border rounded-rounded h-boton2 flex-1 flex-row items-center justify-center">
+					<View className="flex-row justify-between mb-6 gap-4">
+						<View className="bg-card border border-border rounded-rounded2 h-boton2 flex-1 flex-row items-center justify-center">
 							<Chart size={20} color="#21c063" variant="Bold" />
 							<Text className="text-segundario ml-2 text-h4">
 								{exercise.level}
 							</Text>
 						</View>
-						<View className="bg-card border border-border rounded-rounded h-boton2 flex-1 flex-row items-center justify-center">
+						<View className="bg-card border border-border rounded-rounded2 h-boton2 flex-1 flex-row items-center justify-center">
 							<Timer1
 								size={20}
 								color="#4e9effff"
@@ -133,7 +133,7 @@ export default function ExerciseDetail() {
 								{exercise.rest} sec
 							</Text>
 						</View>
-						<View className="bg-card border border-border rounded-rounded h-boton2 flex-1 flex-row items-center justify-center">
+						<View className="bg-card border border-border rounded-rounded2 h-boton2 flex-1 flex-row items-center justify-center">
 							<Weight size={20} color="#F4C714" variant="Bold" />
 							<Text className="text-segundario ml-2 text-h4">
 								{exercise.series}x{exercise.reps}
@@ -145,7 +145,7 @@ export default function ExerciseDetail() {
 				{/* Action Button */}
 				<ScaleButton
 					onPress={handleComplete}
-					className="h-boton2 rounded-rounded flex-row items-center justify-center mb-12 border border-border overflow-hidden relative bg-card "
+					className="h-boton2 rounded-rounded2 flex-row items-center justify-center mb-12 border border-border overflow-hidden relative bg-card "
 				>
 					<View
 						style={{

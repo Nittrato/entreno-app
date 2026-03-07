@@ -115,7 +115,7 @@ export default function Home() {
 				</View>
 
 				{/* Progress Card */}
-				<View className="mx-6 p-6 bg-card rounded-rounded border border-border flex-row items-center justify-between mb-10">
+				<View className="mx-6 p-6 bg-card rounded-rounded2 border border-border flex-row items-center justify-between mb-10">
 					<View>
 						<Text className="text-primario text-h3 mb-1">
 							Progreso Mensual
