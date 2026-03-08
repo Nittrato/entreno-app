@@ -66,7 +66,7 @@ export default function ExerciseDetail() {
 
 	return (
 		<ScrollView
-			className="flex-1 bg-fondo"
+			className="flex-1"
 			showsVerticalScrollIndicator={false}
 		>
 			{/* Hero Section */}
@@ -88,15 +88,15 @@ export default function ExerciseDetail() {
 
 				{/* Header Controls */}
 				<TouchableOpacity
-					className="absolute web:backdrop-blur-md bg-fondo/60 top-6 left-6 w-boton h-boton rounded-full items-center justify-center z-10"
+					className="absolute web:backdrop-blur-md bg-fondo/60 top-6 left-6 w-boton h-boton rounded-rounded items-center justify-center z-10"
 					onPress={() => router.back()}
 					activeOpacity={0.6}
 				>
-					<ArrowLeft2 color="white" className="icon" />
+					<ArrowLeft2 color="white" size={20} />
 				</TouchableOpacity>
 
 				{/* Title & Description Overlay */}
-				<View className="absolute bottom-0 left-6 right-6">
+				<View className="absolute bottom-0 left-5 right-5">
 					<View className="bg-color/10 self-start px-2 py-1 rounded-xl mb-3">
 						<Texto className="text-color text-base">
 							{exercise.location}
@@ -111,8 +111,8 @@ export default function ExerciseDetail() {
 				</View>
 			</View>
 
-			<View className="mx-6 mt-10">
-				<FadeSlideView distance={30}>
+			<View className="mx-5 mt-10">
+				<FadeSlideView>
 					{/* Stats Cards */}
 					<View className="flex-row justify-between mb-6 gap-4">
 						<View className="bg-card border border-border rounded-rounded2 h-boton2 flex-1 flex-row items-center justify-center">

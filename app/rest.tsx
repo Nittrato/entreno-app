@@ -77,23 +77,24 @@ export default function RestScreen() {
 	return (
 		<View className="flex-1 bg-fondo">
 			{/* Header Controls */}
-			<View className="flex-row items-center justify-between p-6">
+			<View className="flex-row items-center justify-between p-5">
 				<TouchableOpacity
 					onPress={() => router.back()}
 					activeOpacity={0.6}
 					className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border z-10"
 				>
 					<Add
-						className="icon"
+						
 						color="#FFFFFF"
+						size={20}
 						style={{ transform: [{ rotate: '45deg' }] }}
 					/>
 				</TouchableOpacity>
 				<Texto className="text-segundario absolute left-0 right-0 text-center text-h3">Descanso</Texto>
 			</View>
 
-			<View className="items-center px-6 py-12 gap-12">
-				<FadeSlideView distance={30}>
+			<View className="items-center px-5 py-12 gap-12">
+				<FadeSlideView>
 					<Animated.View style={{ transform: [{ scale: pulseAnim }] }}>
 						<CircularProgress
 							progress={timeLeft / (parseInt(duration) || 60)}
@@ -108,7 +109,7 @@ export default function RestScreen() {
 				</FadeSlideView>
 
 				{/* Controls */}
-				<View className="flex-row items-center justify-around w-full mt-14 px-6">
+				<View className="flex-row items-center justify-around w-full mt-14 px-5">
 					<ScaleButton
 						onPress={() => setTimeLeft(parseInt(duration) || 60)}
 						className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border"
@@ -138,7 +139,7 @@ export default function RestScreen() {
 
 			{/* Next Exercise Preview */}
 			{nextExercise && (
-				<FadeSlideView className="mt-16 w-full px-6" distance={30}>
+				<FadeSlideView className="mt-16 w-full px-5">
 					<Texto className="text-segundario text-h3 mb-4 ">
 						Siguiente ejercicio
 					</Texto>

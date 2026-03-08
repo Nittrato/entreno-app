@@ -105,7 +105,7 @@ export default function Home() {
 			className="flex-1 bg-fondo"
 			showsVerticalScrollIndicator={false}
 		>
-			<FadeSlideView distance={20}>
+			
 				{/* Header */}
 				<View className="pt-16 px-6 mb-8">
 					<Texto className="text-segundario text-h2">
@@ -114,7 +114,8 @@ export default function Home() {
 				</View>
 
 				{/* Progress Card */}
-				<View className="mx-6 p-6 bg-card rounded-rounded2 border border-border flex-row items-center justify-between mb-10">
+				<FadeSlideView>
+					<View className="mx-6 p-6 bg-card rounded-rounded2 border border-border flex-row items-center justify-between mb-10">
 					<View>
 						<Texto className="text-primario text-h3 mb-1">
 							Progreso Mensual
@@ -133,6 +134,7 @@ export default function Home() {
 						</Texto>
 					</CircularProgress>
 				</View>
+				</FadeSlideView>
 
 				{/* Calendar Header */}
 				<View className="mx-6 flex-row justify-between items-center mb-6">
@@ -201,7 +203,8 @@ export default function Home() {
 				</View>
 
 				{/* Exercises List */}
-				<View className="mx-6" key={selectedDay}>
+				<FadeSlideView>
+					<View className="mx-6" key={selectedDay}>
 					<Texto className="text-segundario text-h3 mb-6">
 						{selectedDay}
 						{currentDayRoutine?.title && ` - ${currentDayRoutine.title}`}
@@ -223,7 +226,8 @@ export default function Home() {
 						</View>
 					)}
 				</View>
-			</FadeSlideView>
+				</FadeSlideView>
+			
 		</ScrollView>
 	);
 }
