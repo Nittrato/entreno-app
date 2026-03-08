@@ -67,7 +67,7 @@ export default function ExerciseDetail() {
 	return (
 		<ScrollView
 			className="flex-1 bg-fondo"
-			contentContainerStyle={{ paddingBottom: 100 }}
+			showsVerticalScrollIndicator={false}
 		>
 			{/* Hero Section */}
 			<View className="relative h-[680px]">
@@ -82,16 +82,13 @@ export default function ExerciseDetail() {
 				/>
 
 				<LinearGradient
-					colors={[
-						'transparent',
-						'#0E1A11',
-					]}
+					colors={['transparent', '#0a1810']}
 					className="absolute inset-0"
 				/>
 
 				{/* Header Controls */}
 				<TouchableOpacity
-					className="absolute backdrop-blur-md web:anim bg-fondo/60 top-6 left-6 w-boton h-boton rounded-full items-center justify-center z-10"
+					className="absolute web:backdrop-blur-md bg-fondo/60 top-6 left-6 w-boton h-boton rounded-full items-center justify-center z-10"
 					onPress={() => router.back()}
 					activeOpacity={0.6}
 				>
@@ -164,7 +161,7 @@ export default function ExerciseDetail() {
 							size={24}
 							color={
 								seriesDone / exercise.series > 0.5
-									? '#0e1a11'
+									? '#122317'
 									: '#7faa96'
 							}
 							variant="Bold"
@@ -173,19 +170,17 @@ export default function ExerciseDetail() {
 				</ScaleButton>
 
 				{/* Next Exercises */}
-				<View>
-					<Texto className="text-segundario text-h3 mb-6">
-						Siguientes ejercicios
+				<Texto className="text-segundario text-h3 mb-6">
+					Siguientes ejercicios
+				</Texto>
+				{nextExercises.map(ex => (
+					<ExerciseCard key={ex.id} exercise={ex} date={date} />
+				))}
+				{nextExercises.length === 0 && (
+					<Texto className="text-segundario">
+						Último ejercicio del día
 					</Texto>
-					{nextExercises.map(ex => (
-						<ExerciseCard key={ex.id} exercise={ex} date={date} />
-					))}
-					{nextExercises.length === 0 && (
-						<Texto className="text-segundario">
-							Último ejercicio del día
-						</Texto>
-					)}
-				</View>
+				)}
 			</View>
 		</ScrollView>
 	);

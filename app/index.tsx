@@ -103,7 +103,6 @@ export default function Home() {
 	return (
 		<ScrollView
 			className="flex-1 bg-fondo"
-			contentContainerStyle={{ paddingBottom: 100 }}
 			showsVerticalScrollIndicator={false}
 		>
 			<FadeSlideView distance={20}>

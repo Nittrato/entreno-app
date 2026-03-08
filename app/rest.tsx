@@ -84,7 +84,7 @@ export default function RestScreen() {
 					className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border z-10"
 				>
 					<Add
-						size={22}
+						className="icon"
 						color="#FFFFFF"
 						style={{ transform: [{ rotate: '45deg' }] }}
 					/>
@@ -121,9 +121,9 @@ export default function RestScreen() {
 						className="w-36 h-24 bg-color rounded-rounded2 items-center justify-center shadow-xl shadow-color/60"
 					>
 						{isActive ? (
-							<Pause size={40} color="#0f1913" variant="Bold" />
+							<Pause size={40} color="#0a1810" variant="Bold" />
 						) : (
-							<Play size={40} color="#0f1913" variant="Bold" />
+							<Play size={40} color="#0a1810" variant="Bold" />
 						)}
 					</ScaleButton>
 

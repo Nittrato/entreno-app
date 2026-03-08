@@ -10,9 +10,9 @@ module.exports = {
 		extend: {
 			colors: {
 				/* Colores de fondo */
-				fondo: '#0E1A11',
-				card: '#152618',
-				border: '#1D362A',
+				fondo: '#0a1810',
+				card: '#122317',
+				border: '#1c2d20',
 				/* Colores de botones y textos */
 				color: '#21c063',
 				primario: '#FFFFFF',
