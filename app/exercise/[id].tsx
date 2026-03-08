@@ -93,7 +93,7 @@ export default function ExerciseDetail() {
 				<TouchableOpacity
 					className="absolute backdrop-blur-md web:anim bg-fondo/60 top-6 left-6 w-boton h-boton rounded-full items-center justify-center z-10"
 					onPress={() => router.back()}
-					activeOpacity={0.8}
+					activeOpacity={0.6}
 				>
 					<ArrowLeft2 color="white" className="icon" />
 				</TouchableOpacity>

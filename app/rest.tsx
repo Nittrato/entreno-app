@@ -80,7 +80,7 @@ export default function RestScreen() {
 			<View className="flex-row items-center justify-between p-6">
 				<TouchableOpacity
 					onPress={() => router.back()}
-					activeOpacity={0.8}
+					activeOpacity={0.6}
 					className="w-boton h-boton bg-card rounded-rounded items-center justify-center border border-border z-10"
 				>
 					<Add
